@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{ .Title }}</h1>
+    {{range .Story}}
+    <p>{{.}}</p>
+    {{end}}
+     
+    <h4>Select:</h4>
+    {{range .Options}}
+    <li>
+        <a target="_self" href="/story?chapter={{.Arc}}">{{.Text}}</a>
+    </li>
+    {{end}}
+    </body>
+</html>
